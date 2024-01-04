@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="AOcheckoutstyle.css">
+
+    <style>
+        body{
+    font-family: monospace;
+    overflow-x: hidden;
+    font-synthesis: 15px;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+    max-width: 90%;
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    background-color: blanchedalmond;
+    color:#000000
+    padding: 20px;
+    box-shadow: rgb(79, 75, 75)b5b;
+    
+}
+     
+    </style>
+</head>
+<body>
+
+
+            <h1>Checkout</h1>
+            <div class="form">
+                <div class="group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+    
+                <div class="group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" id="phone">
+                </div>
+    
+                <div class="group">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address">
+                </div>
+    
+                <div class="group">
+                    <label for="country">Country</label>
+                    <input type="text" name="country" id="country"">
+                </div>
+
+                <div class="group">
+                    <label for="payment method">Payment method</label>
+                    <select name="payment method" id="payment method">
+                        <option value="">Touch n go</option>
+                        <option value="">Paypal</option>
+                        <option value="">Credit/Debit card</option>
+                        <option value="">Cash payment</option>
+                    </select>
+
+
+                
+                </div>
+
+
+            </div>
+            <div class="return">
+        
+            <button class="buttonCheckout">CHECKOUT</button>
+            </div>
+    </div>
+</div>
+
+
+<script src="AOcheckout.js"></script>
+
+</body>
+</html>
