@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Website</title>
+    <link rel="stylesheet" href="ask2.css">
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+   <style>
+    body {
+        
+        font-family: 'Times New Roman', serif; /* Change the font to Times New Roman */
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        background-image: url("Untitled\ design.png");
+        background-size: 100%; /* Ensure the background image covers the entire page */
+        background-repeat: repeat; /* Do not repeat the background image */
+        }
+
+    }
+
+    header {
+        background-color: #ffffff;
+        padding: 50px;
+        color: rgb(36, 34, 34);
+        box-shadow:rgb(79, 75, 75)b5b;
+        text-align: center;
+        display: flex;
+    }
+    nav {
+            background-color: #ffffff;
+            color: #171515;
+            overflow: hidden;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            position: fixed; /* Set the navigation bar to fixed position */
+            width: 100%; /* Take up the full width of the viewport */
+            top: 0; /* Stick to the top */
+            z-index: 1000; /* Ensure the navigation bar is on top of other elements */
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: rgb(12, 12, 12);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ffffff;
+            color: rgb(109, 157, 104);
+        }
+        /* Add padding to the content to prevent it from being hidden behind the fixed navigation bar */
+        body {
+            padding-top: 50px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            color: rgb(37, 33, 33);
+            text-align: center;
+        }
+
+        .introduction-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        review-container {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .review {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-top: 20px;
+            border-bottom: 1px solid #ffffff;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .profile-picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .details {
+            flex-grow: 1;
+        }
+
+        .customer-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .star-rating {
+            color: #FFD700; /* Gold color for stars */
+            margin-bottom: 5px;
+        }
+
+        .word-review {
+            font-style: italic;
+        }
+
+        
+        .review-form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color:#333;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            margin: 5px 0;
+        }
+        footer {
+            background-color:#333;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            margin: 5px 0;
+        }
+   </style>
+<body>
+<nav>
+    <div id="header"class="header"></div>
+    <header>
+    <h1>The Willow Cafe</h1>
+    </header>
+<a href="http://127.0.0.1:5500/the%20willow%20cafe(ask%20project)/MAIN.html#home">Home</a>
+<a href="http://127.0.0.1:5500/the%20willow%20cafe(ask%20project)/MAIN.html#about">About Us</a>
+<a href="http://127.0.0.1:5500/the%20willow%20cafe(ask%20project)/MAIN.html#menu">Menu</a>
+<a href="http://127.0.0.1:5500/the%20willow%20cafe(ask%20project)/AOindex.html">Order</a>
+<a href="review">Review</a>
+</nav>
+<br>
+<h1>    </h1>
+<br>
+<h1>           </h1>
+<br>
+<h1>        </h1>
+<br>
+<div id="review" >
+    <div class="review-form">
+        <h2>Write a Review</h2>
+        <form id="customerReviewForm">
+            <label for="customerName">Your Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+    
+            <label for="customerProfilePicture">Profile Picture:</label>
+            <input type="file" id="customerProfilePicture" name="customerProfilePicture" accept="image/*" required>
+    
+            <label for="starRating">Star Rating:</label>
+            <select id="starRating" name="starRating" required>
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+            </select>
+    
+            <label for="wordReview">Your Review:</label>
+            <textarea id="wordReview" name="wordReview" rows="4" required></textarea>
+    
+            <input type="submit" value="Submit Review">
+        </form>
+    </div>
+
+    <br>
+                
+    <div class="review">
+    
+            <img src="photo_6280560127987792131_y - Copy.jpg" alt="Customer 1" class="profile-picture">
+            <div class="details">
+                <div class="customer-name">John Doe</div>
+                <div class="star-rating">★★★★★</div>
+                <div class="word-review">"A wonderful place with amazing coffee and a cozy atmosphere. Highly recommended!"</div>
+            </div>
+     
+            <img src="photo_6280560127987792133_m.jpg" alt="Customer 2" class="profile-picture">
+            <div class="details">
+                <div class="customer-name">Jane Smith</div>
+                <div class="star-rating">★★★★☆</div>
+                <div class="word-review">"Great coffee selection, friendly staff, and beautiful ambiance. Loved the experience!"</div>
+            </div>
+    </div>
+    </div>
+
+</body>
+<br>
+<br>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">watch</a></li>
+                    <li><a href="#">bag</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">dress</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/the.willow.cafe?igsh=c2k0MzRkYm1hZjNk
+                    " target="_blank""><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/watch?v=QX43QTYyV-8&t=63s&pp=ygUMZmlzaCBzcGluaW5n"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
