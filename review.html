@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Willow Cafe - Order</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .order-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .menu-category {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            margin: 10px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-item label {
+            flex-grow: 2;
+            margin-right: 10px;
+            text-align: left;
+        }
+
+       
+Continuing from where we left off:
+
+css
+Copy code
+        .menu-item input {
+            width: 80px;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .quantity-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 80px;
+            text-align: center;
+        }
+
+        .payment-method {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .credit-card-form {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .credit-card-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .credit-card-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .credit-card-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .credit-card-form button:hover {
+            background-color: #45a049;
+        }
+
+        .submit-button {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The Willow Cafe</h1>
+</header>
+
+<div class="order-container">
+    <div class="menu-category">Coffee</div>
+    <div class="menu-item">
+        <label for="americano">Americano - rm2.50</label>
+        <input type="number" id="americano" name="americano" min="0" value="0" class="quantity-select">
+    </div>
+
+    <div class="menu-item">
+        <label for="hotChocolate">Hot Chocolate - rm3.00</label>
+        <input type="number" id="hotChocolate" name="hotChocolate" min="0" value="0" class="quantity-select">
+    </div>
+
+    <!-- Add more coffee items as needed -->
+
+    <div class="menu-category">Snacks</div>
+    <div class="menu-item">
+        <label for="avocadoToast">Avocado Toast - rm5.00</label>
+        <input type="number" id="avocadoToast" name="avocadoToast" min="0" value="0" class="quantity-select">
+    </div>
+
+    <div class="menu-item">
+        <label for="cinnamonToast">Cinnamon Toast - rm4.00</label>
+        <input type="number" id="cinnamonToast" name="cinnamonToast" min="0" value="0" class="quantity-select">
+    </div>
+
+    <!-- Add more snacks items as needed -->
+
+    <div class="payment-method">
+        <label for="paymentMethod">Choose Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" onchange="showCreditCardForm()">
+            <option value="onlineTransfer">Online Transfer</option>
+            <option value="banking">Banking</option>
+            <option value="creditCard">Credit/Debit Card</option>
+        </select>
+    </div>
+
+    <div class="credit-card-form">
+        <label for="cardName">Name on Card:</label>
+        <input type="text" id="cardName" name="cardName" required>
+
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required>
+
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+
+        <button type="button">Submit Payment</button>
+    </div>
+
+    <button class="submit-button" type="button" onclick="submitOrder()">Submit Order</button>
+</div>
+
+<script>
+    function showCreditCardForm() {
+        var paymentMethod = document.getElementById("paymentMethod").value;
+        var creditCardForm = document.querySelector(".credit-card-form");
+
+        if (paymentMethod === "creditCard") {
+            creditCardForm.style.display = "block";
+        } else {
+            creditCardForm.style.display = "none";
+        }
+    }
+
+    function submitOrder() {
+        // Implement your order submission logic here
+        alert("Order submitted successfully!");
+    }
+</script>
+
+</body>
+</html>
