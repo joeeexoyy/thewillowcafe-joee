@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name":" Avocado toast",
+        "price": 6.00,
+        "image": "avocado.jpg.jpg"
+    },
+    {
+        "id": 2,
+        "name":"Garlic Cheese Toast",
+        "price": 6.00,
+        "image": "garlic.jpg.jpg"
+    },
+    {
+        "id": 3,
+        "name":"Macaroni Salad",
+        "price": 12.00,
+        "image": "macaroni salad.jpg.jpg"
+    },
+    {
+        "id": 4,
+        "name":" Smoked Duck Carbonara",
+        "price": 15.00,
+        "image": "carbonara.jpg.jpg"
+    },
+    {
+        "id": 5,
+        "name":" Cinammon Toast",
+        "price": 8.00,
+        "image": "cinnamon.jpg.jpg"
+    },
+    {
+        "id": 6,
+        "name":" Caesar Salad",
+        "price": 12.00,
+        "image": "caesar salad.jpg.jpg"
+    },
+    {
+        "id": 7,
+        "name":" Macaroni Cheese",
+        "price": 11.00,
+        "image": "mac n chesse.jpg.jpg"
+    },
+    {
+        "id": 8,
+        "name":" Lasagna Bolognese",
+        "price": 16.00,
+        "image": "lasagna.jpg.jpg"
+    },
+    {
+        "id": 9,
+        "name":" Cappucino",
+        "price": 8.00,
+        "image": "cappucino.jpg.jpg"
+    },
+    {
+        "id": 10,
+        "name":" Spanish Latte",
+        "price": 7.00,
+        "image": "spanish latte.jpg.jpg"
+    },
+    {
+        "id": 11,
+        "name":" Mocha",
+        "price": 9.00,
+        "image": "mocha.jpg.jpg"
+    },
+    {
+        "id": 12,
+        "name":" Matcha Latte",
+        "price": 16.00,
+        "image": "matcha latte.jpg.jpg"
+    },
+    {
+        "id": 13,
+        "name":" Americano",
+        "price": 8.00,
+        "image": "americano.jpg.jpg"
+    },
+    {
+        "id": 14,
+        "name":" Chocolate",
+        "price": 7.00,
+        "image": "chcolate.jpg.jpg"
+    },
+    {
+        "id": 15,
+        "name":" Honey Lemon",
+        "price": 6.00,
+        "image": "honey lemon.jpg.jpg"
+    },
+    {
+        "id": 16,
+        "name":" Passion Fruit Tea",
+        "price": 9.00,
+        "image": "passion fruit tea.jpg.jpg"
+    }
+]
