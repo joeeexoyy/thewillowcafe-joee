@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+html{
+    scroll-behavior: smooth;
+    
+}
+
+nav{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    position:fixed;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+
+}
+
+nav.logo img{
+    width: 100p;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+nav ul{
+    list-style: none;
+
+
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 0 15 px;
+
+}
+
+nav ul li a{
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s;
+}
